@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define your custom theme colors */
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-color-rgb: 30, 58, 138; /* Matte Blue */
+  --secondary-color-rgb: 15, 23, 42; /* Matte Black */
+  --accent-color-rgb: 168, 168, 168; /* Matte Silver */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +17,9 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --primary-color-rgb: 30, 58, 138; /* Matte Blue */
+    --secondary-color-rgb: 15, 23, 42; /* Matte Black */
+    --accent-color-rgb: 168, 168, 168; /* Matte Silver */
   }
 }
 
@@ -26,8 +33,33 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* Additional utility classes */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .text-primary {
+    color: rgb(var(--primary-color-rgb));
+  }
+
+  .bg-primary {
+    background-color: rgb(var(--primary-color-rgb));
+  }
+
+  .text-secondary {
+    color: rgb(var(--secondary-color-rgb));
+  }
+
+  .bg-secondary {
+    background-color: rgb(var(--secondary-color-rgb));
+  }
+
+  .text-accent {
+    color: rgb(var(--accent-color-rgb));
+  }
+
+  .bg-accent {
+    background-color: rgb(var(--accent-color-rgb));
   }
 }
